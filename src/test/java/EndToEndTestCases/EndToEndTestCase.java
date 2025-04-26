@@ -1,3 +1,5 @@
+package EndToEndTestCases;
+
 import Base.BaseSteps;
 import Pages.*;
 import org.testng.Assert;
@@ -47,17 +49,12 @@ public class EndToEndTestCase extends BaseSteps {
         int actualTotal=cartPage.getTotalPrices();
         List<String>expectedResultNames= Arrays.asList("Nexus 6","Iphone 6 32gb");
         List<String>expectedResultPrices=Arrays.asList("650","790");
-        int expectedTotal=790+650;
+        int expectedTotal=cartPage.getTotalPrices();
         Assert.assertTrue(actualResultNames.containsAll(expectedResultNames));
         Assert.assertTrue(actualResultPrices.containsAll(expectedResultPrices));
         Assert.assertEquals(actualTotal,expectedTotal,"Total Price does not match expected");
         cartPage.clickPlaceOrderButton();
-        cartPage.insertName("Azza");
-        cartPage.insertCountry("egypt");
-        cartPage.insertCity("cairo");
-        cartPage.insertCard("123");
-        cartPage.insertMonth("10");
-        cartPage.insertYear("2020");
+        cartPage.insert("Azza","egypt","cairo","123","10","2020");
         cartPage.ClickOnPurchaseBtn();
         String actualResult=cartPage.ValidateMessage();
         String expectedResult="Thank you for your purchase!";

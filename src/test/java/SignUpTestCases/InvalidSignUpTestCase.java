@@ -1,3 +1,5 @@
+package SignUpTestCases;
+
 import Base.BaseSteps;
 import Pages.SignupPage;
 import org.testng.Assert;

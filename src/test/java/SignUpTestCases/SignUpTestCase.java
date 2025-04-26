@@ -1,3 +1,5 @@
+package SignUpTestCases;
+
 import Base.BaseSteps;
 import Pages.SignupPage;
 import com.github.javafaker.Faker;

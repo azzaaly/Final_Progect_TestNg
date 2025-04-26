@@ -64,30 +64,21 @@ public class CartPage {
      driver.findElement(placeOrderButton).click();
     }
 
-    public void insertName(String name){
+    public void insert(String name , String country , String city , String card , String month , String year){
         wait.until(ExpectedConditions.visibilityOfElementLocated(nameBox));
         driver.findElement(nameBox).sendKeys(name);
-    }
-    public void insertCountry(String country){
         wait.until(ExpectedConditions.visibilityOfElementLocated(countyBox));
         driver.findElement(countyBox).sendKeys(country);
-    }
-    public void insertCity(String city){
         wait.until(ExpectedConditions.visibilityOfElementLocated(cityBox));
         driver.findElement(cityBox).sendKeys(city);
-    }
-    public void insertCard(String card){
         wait.until(ExpectedConditions.visibilityOfElementLocated(cardBox));
         driver.findElement(cardBox).sendKeys(card);
-    }
-    public void insertMonth(String month){
         wait.until(ExpectedConditions.visibilityOfElementLocated(monthBox));
         driver.findElement(monthBox).sendKeys(month);
-    }
-    public void insertYear(String year){
         wait.until(ExpectedConditions.visibilityOfElementLocated(yearBox));
         driver.findElement(yearBox).sendKeys(year);
     }
+
     public String ValidateMessage(){
         wait.until(ExpectedConditions.visibilityOfElementLocated(textMessage));
         return driver.findElement(textMessage).getText();

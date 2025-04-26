@@ -1,3 +1,5 @@
+package LoginTestCase;
+
 import Base.BaseSteps;
 import Pages.LoginPage;
 import org.testng.Assert;

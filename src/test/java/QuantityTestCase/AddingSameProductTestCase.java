@@ -1,3 +1,5 @@
+package QuantityTestCase;
+
 import Base.BaseSteps;
 import Pages.CartPage;
 import Pages.ProductOnePage;
